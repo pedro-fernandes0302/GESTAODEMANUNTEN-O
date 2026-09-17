@@ -1,0 +1,61 @@
+.Register {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.Register h2 {
+  margin: 0 0 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.Register form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Register input {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.Register input::placeholder {
+  color: #9ca3af;
+}
+
+.Register input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.Register button[type="submit"] {
+  margin-top: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  background: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.Register button[type="submit"]:hover {
+  background: #2563eb;
+}
+
+.Register button[type="submit"]:active {
+  background: #1d4ed8;
+}

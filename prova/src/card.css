@@ -1,0 +1,32 @@
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  border-left: 5px solid #94a3b8;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Status como badge */
+.card p:last-of-type {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
