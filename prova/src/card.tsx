@@ -13,6 +13,7 @@ export interface problemaProps{
 
 export default function Card({nome, prioridade, descricao, categoria, status,local}: problemaProps) {
         const [solucao, setSolucao] = useState('')
+        const [statuscheck, setStatus] = useState(status ?? false)
         return (<>
     <div className="card">
       <h2>{nome}</h2>
@@ -21,9 +22,12 @@ export default function Card({nome, prioridade, descricao, categoria, status,loc
       <p>Categoria: {categoria}</p>
       <p>Local: {local}</p>
       <br></br>
-      <input type="text" placeholder="Solução" value={solucao} onChange={(e) => setSolucao(e.target.value)} />
+      
+      <p>Solução:</p><input type="text" placeholder="Descreva solução" value={solucao} onChange={(e) => setSolucao(e.target.value)} />
+      <button onClick={() => { setStatus(true)}}>Concluir</button>
+      <p>Status: {solucao}</p>
       <label>
-        <input type="checkbox" checked={status} readOnly /> <span>{status ? 'Concluído' : 'Pendente'}</span>
+        <input type="checkbox" checked={statuscheck} onChange={(e) => setStatus(e.target.checked)} /> <span>{statuscheck ? 'Concluído' : 'Pendente'}</span>
       </label>
     </div>
  </>
